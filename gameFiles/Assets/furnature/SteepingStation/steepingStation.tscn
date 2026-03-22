@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://26ytafvksw1g"]
+
+[ext_resource type="Script" uid="uid://b1w41f3pnl4ki" path="res://Assets/furnature/SteepingStation/steepingStationScript.gd" id="1_0sbsn"]
+[ext_resource type="Material" uid="uid://djkl2n0qoxtyc" path="res://Assets/furnature/furnatureMatTemp1.tres" id="2_nx5po"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_10gxc"]
+size = Vector3(2, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qcacd"]
+size = Vector3(2, 1, 1)
+
+[node name="steepingStation" type="StaticBody3D" unique_id=474436658 node_paths=PackedStringArray("mesh")]
+script = ExtResource("1_0sbsn")
+mesh = NodePath("MeshInstance3D")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=946263752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_10gxc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=97965611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = ExtResource("2_nx5po")
+mesh = SubResource("BoxMesh_qcacd")
+
+[node name="placeMarker" type="Marker3D" parent="." unique_id=984888391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

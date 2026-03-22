@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ubruikhxfqsb"]
+
+[ext_resource type="Texture2D" uid="uid://bkqmaodo1dvta" path="res://DevStuff/Textures/DT_Lavender.png" id="1_c80o2"]
+
+[resource]
+albedo_texture = ExtResource("1_c80o2")
+uv1_triplanar = true
+texture_filter = 0
+stencil_flags = 2
+stencil_outline_thickness = 0.05

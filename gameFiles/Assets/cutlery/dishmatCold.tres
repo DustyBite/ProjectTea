@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dm31iyj6j30qa"]
+
+[ext_resource type="Texture2D" uid="uid://ippkbitckv7q" path="res://DevStuff/Textures/DT_MutedBlue.png" id="1_bow0m"]
+
+[resource]
+albedo_texture = ExtResource("1_bow0m")
+uv1_triplanar = true
+texture_filter = 0

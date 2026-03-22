@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://jsd4lky7uldv"]
+
+[ext_resource type="Script" uid="uid://csxj1x0x2uh8s" path="res://Assets/furnature/kettle/kettleScript.gd" id="1_70mav"]
+[ext_resource type="Material" uid="uid://cj2nci5px415b" path="res://Assets/furnature/kettle/kettleMatTemp1.tres" id="2_70mav"]
+[ext_resource type="Material" uid="uid://cxfqgc0oak7tr" path="res://Assets/furnature/kettle/kettleMatTemp2.tres" id="3_vutbd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_10gxc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qcacd"]
+size = Vector3(1, 0.5, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_70mav"]
+
+[node name="kettle" type="StaticBody3D" unique_id=474436658 node_paths=PackedStringArray("mesh")]
+script = ExtResource("1_70mav")
+mesh = NodePath("MeshInstance3D")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=946263752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_10gxc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=97965611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+material_override = ExtResource("2_70mav")
+mesh = SubResource("BoxMesh_qcacd")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=481818405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = ExtResource("3_vutbd")
+mesh = SubResource("SphereMesh_70mav")

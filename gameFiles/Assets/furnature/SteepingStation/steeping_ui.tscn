@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://bojk6p7t1jmhu"]
+
+[ext_resource type="Script" uid="uid://brkfbsoavta04" path="res://Assets/furnature/SteepingStation/steepingUiScript.gd" id="1_303l3"]
+
+[node name="steepingUI" type="Panel" unique_id=1275759806]
+offset_left = 477.0
+offset_top = 122.0
+offset_right = 1107.0
+offset_bottom = 682.0
+script = ExtResource("1_303l3")
+
+[node name="green" type="Button" parent="." unique_id=1811483449]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 110.0
+text = "GREEN TEA"
+
+[node name="black" type="Button" parent="." unique_id=1022108760]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 10.0
+offset_right = 620.0
+offset_bottom = 110.0
+text = "BLACK TEA"
+
+[node name="oolong" type="Button" parent="." unique_id=1649854738]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 120.0
+offset_right = 310.0
+offset_bottom = 220.00005
+text = "OOLONG TEA"
+
+[node name="white" type="Button" parent="." unique_id=1408728639]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 120.0
+offset_right = 620.0
+offset_bottom = 220.00005
+text = "WHITE TEA"
+
+[node name="yellow" type="Button" parent="." unique_id=1519672067]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 230.0
+offset_right = 310.0
+offset_bottom = 330.00006
+text = "YELLOW TEA"
+
+[node name="dark" type="Button" parent="." unique_id=2095577654]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 230.0
+offset_right = 620.0
+offset_bottom = 330.00006
+text = "DARK TEA"
+
+[node name="jasmine" type="Button" parent="." unique_id=589946229]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 340.0
+offset_right = 310.0
+offset_bottom = 440.0
+text = "JASMINE"
+
+[node name="earlGrey" type="Button" parent="." unique_id=455964870]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 340.0
+offset_right = 620.0
+offset_bottom = 440.0
+text = "EARL GREY"
+
+[node name="ginseng" type="Button" parent="." unique_id=32855400]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 450.0
+offset_right = 310.0
+offset_bottom = 549.9999
+text = "GINSENG TEA"
+
+[node name="chrysanthemum" type="Button" parent="." unique_id=135020817]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 450.0
+offset_right = 620.0
+offset_bottom = 549.9999
+text = "CHRYSANTHEMUM"
+
+[connection signal="pressed" from="green" to="." method="_on_green_pressed"]
+[connection signal="pressed" from="black" to="." method="_on_black_pressed"]
+[connection signal="pressed" from="oolong" to="." method="_on_oolong_pressed"]
+[connection signal="pressed" from="white" to="." method="_on_white_pressed"]
+[connection signal="pressed" from="yellow" to="." method="_on_yellow_pressed"]
+[connection signal="pressed" from="dark" to="." method="_on_dark_pressed"]
+[connection signal="pressed" from="jasmine" to="." method="_on_jasmine_pressed"]
+[connection signal="pressed" from="earlGrey" to="." method="_on_earl_grey_pressed"]
+[connection signal="pressed" from="ginseng" to="." method="_on_ginseng_pressed"]
+[connection signal="pressed" from="chrysanthemum" to="." method="_on_chrysanthemum_pressed"]

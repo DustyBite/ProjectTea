@@ -1,0 +1,248 @@
+[gd_scene format=3 uid="uid://dcgdmlaqpsl72"]
+
+[ext_resource type="Script" uid="uid://dcchckaau0whp" path="res://Assets/furnature/Sink/dirtyBasinScript.gd" id="1_a2nsw"]
+[ext_resource type="Script" uid="uid://c8sf5i1axfaln" path="res://Assets/furnature/Sink/dryingRackScript.gd" id="1_w60k7"]
+[ext_resource type="Material" uid="uid://djkl2n0qoxtyc" path="res://Assets/furnature/furnatureMatTemp1.tres" id="2_7xgyy"]
+[ext_resource type="Script" uid="uid://f7sklagd20cu" path="res://Assets/furnature/Sink/washingBasinScript.gd" id="4_w60k7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_10gxc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qcacd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4m0ny"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ikdrh"]
+size = Vector3(1, 0.5, 1)
+
+[node name="Sink" type="Node3D" unique_id=1147673582]
+
+[node name="dryingRack" type="StaticBody3D" parent="." unique_id=474436658 node_paths=PackedStringArray("mesh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+script = ExtResource("1_w60k7")
+mesh = NodePath("MeshInstance3D")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="dryingRack" unique_id=946263752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_10gxc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="dryingRack" unique_id=97965611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = ExtResource("2_7xgyy")
+mesh = SubResource("BoxMesh_qcacd")
+
+[node name="placeMarkers" type="Node3D" parent="dryingRack" unique_id=1650303786]
+
+[node name="placeMarker1" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1609316061]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, -0.35000002, 1, -0.35)
+
+[node name="placeMarker2" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1838231634]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, -0.125, 1, -0.35)
+
+[node name="placeMarker3" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=893733717]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, 0.125, 1, -0.35)
+
+[node name="placeMarker4" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=443681883]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0.35000002, 1, -0.35)
+
+[node name="placeMarker5" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=360120660]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, -0.35000002, 1, -0.125)
+
+[node name="placeMarker6" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=79742598]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, -0.125, 1, -0.125)
+
+[node name="placeMarker7" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=432966690]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, 0.125, 1, -0.125)
+
+[node name="placeMarker8" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=194668921]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0.35000002, 1, -0.125)
+
+[node name="placeMarker9" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=785140373]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, -0.35000002, 1, 0.125)
+
+[node name="placeMarker10" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1052999677]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, -0.125, 1, 0.125)
+
+[node name="placeMarker11" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1620313129]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, 0.125, 1, 0.125)
+
+[node name="placeMarker12" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1120560881]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0.35000002, 1, 0.125)
+
+[node name="placeMarker13" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=984888391]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, -0.35000002, 1, 0.35)
+
+[node name="placeMarker14" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=491408068]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, -0.125, 1, 0.35)
+
+[node name="placeMarker15" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=290563986]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, 0.125, 1, 0.35)
+
+[node name="placeMarker16" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1008760626]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0.35000002, 1, 0.35)
+
+[node name="placeMarker17" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1833880604]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, -0.25, 1.2, -0.25)
+
+[node name="placeMarker18" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1560111462]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0, 1.2, -0.25)
+
+[node name="placeMarker19" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=476542815]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, 0.25, 1.2, -0.25)
+
+[node name="placeMarker20" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1109844682]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, -0.25, 1.2, 0)
+
+[node name="placeMarker21" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1551036412]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0, 1.2, 0)
+
+[node name="placeMarker22" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=530099235]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, 0.25, 1.2, 0)
+
+[node name="placeMarker23" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=988054554]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, -0.25, 1.2, 0.25)
+
+[node name="placeMarker24" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=180597367]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0, 1.2, 0.25)
+
+[node name="placeMarker25" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=162642273]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, 0.25, 1.2, 0.25)
+
+[node name="placeMarker26" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1759257764]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, -0.14999998, 1.4, -0.15)
+
+[node name="placeMarker27" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=949098198]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0.14999998, 1.4, -0.15)
+
+[node name="placeMarker28" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1731038403]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, -0.14999998, 1.4, 0.15)
+
+[node name="placeMarker29" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=1510301341]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0.14999998, 1.4, 0.15)
+
+[node name="placeMarker30" type="Marker3D" parent="dryingRack/placeMarkers" unique_id=406302405]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0, 1.6, 0)
+
+[node name="washingBasin" type="StaticBody3D" parent="." unique_id=357998033 node_paths=PackedStringArray("dirtyBasin", "dryingrack", "mesh")]
+script = ExtResource("4_w60k7")
+dirtyBasin = NodePath("../dirtyBasin")
+dryingrack = NodePath("../dryingRack")
+mesh = NodePath("MeshInstance3D")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="washingBasin" unique_id=24579728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_4m0ny")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="washingBasin" unique_id=619417916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+material_override = ExtResource("2_7xgyy")
+mesh = SubResource("BoxMesh_ikdrh")
+
+[node name="placeMarker" type="Marker3D" parent="washingBasin" unique_id=1640824702]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, 0, 0.5, 0)
+
+[node name="dirtyBasin" type="StaticBody3D" parent="." unique_id=1952395482 node_paths=PackedStringArray("mesh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+script = ExtResource("1_a2nsw")
+mesh = NodePath("MeshInstance3D")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="dirtyBasin" unique_id=2117388532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_4m0ny")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="dirtyBasin" unique_id=1339618104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+material_override = ExtResource("2_7xgyy")
+mesh = SubResource("BoxMesh_ikdrh")
+
+[node name="placeMarkers" type="Node3D" parent="dirtyBasin" unique_id=1932201775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="placeMarker1" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1704893761]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, -0.35, 1, -0.35)
+
+[node name="placeMarker2" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1860405992]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, -0.125, 1, -0.35)
+
+[node name="placeMarker3" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=2006246623]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, 0.125, 1, -0.35)
+
+[node name="placeMarker4" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1765390625]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0.35, 1, -0.35)
+
+[node name="placeMarker5" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1807657973]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, -0.35, 1, -0.125)
+
+[node name="placeMarker6" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=50998393]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, -0.125, 1, -0.125)
+
+[node name="placeMarker7" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=466486927]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, 0.125, 1, -0.125)
+
+[node name="placeMarker8" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=449944964]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0.35, 1, -0.125)
+
+[node name="placeMarker9" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=211479657]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, -0.35, 1, 0.125)
+
+[node name="placeMarker10" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1253581091]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, -0.125, 1, 0.125)
+
+[node name="placeMarker11" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=425406646]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, 0.125, 1, 0.125)
+
+[node name="placeMarker12" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1810094792]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0.35, 1, 0.125)
+
+[node name="placeMarker13" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=366824735]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, -0.35, 1, 0.35)
+
+[node name="placeMarker14" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1457716548]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, -0.125, 1, 0.35)
+
+[node name="placeMarker15" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=160520913]
+transform = Transform3D(0.78119373, -6.829413e-08, 0.6242887, -8.742278e-08, -1, -1.675263e-15, 0.6242887, -5.457705e-08, -0.78119373, 0.125, 1, 0.35)
+
+[node name="placeMarker16" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1469040103]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0.35, 1, 0.35)
+
+[node name="placeMarker17" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=190661232]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, -0.25, 1.2, -0.25)
+
+[node name="placeMarker18" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=25869243]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0, 1.2, -0.25)
+
+[node name="placeMarker19" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=330640101]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, 0.25, 1.2, -0.25)
+
+[node name="placeMarker20" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=816684727]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, -0.25, 1.2, 0)
+
+[node name="placeMarker21" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1794052185]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0, 1.2, 0)
+
+[node name="placeMarker22" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1764107927]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, 0.25, 1.2, 0)
+
+[node name="placeMarker23" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=894713218]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, -0.25, 1.2, 0.25)
+
+[node name="placeMarker24" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=500836735]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0, 1.2, 0.25)
+
+[node name="placeMarker25" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1994092371]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, 0.25, 1.2, 0.25)
+
+[node name="placeMarker26" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1896697542]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, -0.15, 1.4, -0.15)
+
+[node name="placeMarker27" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1591343830]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0.15, 1.4, -0.15)
+
+[node name="placeMarker28" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=215136504]
+transform = Transform3D(0.7811937, -6.8294135e-08, 0.6242887, -8.742278e-08, -1, 2.9778314e-15, 0.6242887, -5.4577054e-08, -0.7811937, -0.15, 1.4, 0.15)
+
+[node name="placeMarker29" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1386460194]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0.15, 1.4, 0.15)
+
+[node name="placeMarker30" type="Marker3D" parent="dirtyBasin/placeMarkers" unique_id=1448089331]
+transform = Transform3D(0.7766955, -6.790088e-08, 0.62987626, -8.742278e-08, -1, -3.350526e-15, 0.62987626, -5.5065534e-08, -0.7766955, 0, 1.6, 0)

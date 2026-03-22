@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cvstlcoiqu3hh"]
+
+[ext_resource type="Texture2D" uid="uid://x6rds1wm604f" path="res://DevStuff/Textures/DT_LightGrey.png" id="1_r10ac"]
+
+[resource]
+albedo_texture = ExtResource("1_r10ac")
+uv1_triplanar = true
+texture_filter = 0

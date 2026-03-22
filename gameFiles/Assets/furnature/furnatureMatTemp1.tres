@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://djkl2n0qoxtyc"]
+
+[ext_resource type="Texture2D" uid="uid://n5bucs2atg6i" path="res://DevStuff/Textures/DT_SoftOrange.png" id="1_1wt6r"]
+
+[resource]
+albedo_texture = ExtResource("1_1wt6r")
+uv1_triplanar = true
+texture_filter = 0
+stencil_flags = 2
+stencil_outline_thickness = 0.05

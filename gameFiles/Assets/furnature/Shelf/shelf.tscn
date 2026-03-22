@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://kltrr0gci3fl"]
+
+[ext_resource type="Script" uid="uid://cvu7x4cpwqrp8" path="res://Assets/furnature/Shelf/shelf.gd" id="1_0p442"]
+[ext_resource type="Material" uid="uid://djkl2n0qoxtyc" path="res://Assets/furnature/furnatureMatTemp1.tres" id="2_cvy2c"]
+[ext_resource type="PackedScene" uid="uid://cr56dwqk8ks4" path="res://Assets/cutlery/cup.tscn" id="3_nv4lx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_10gxc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qcacd"]
+
+[node name="shelf" type="StaticBody3D" unique_id=474436658 node_paths=PackedStringArray("mesh")]
+script = ExtResource("1_0p442")
+dishScene = ExtResource("3_nv4lx")
+mesh = NodePath("MeshInstance3D")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=946263752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_10gxc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=97965611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = ExtResource("2_cvy2c")
+mesh = SubResource("BoxMesh_qcacd")
+
+[node name="placeMarkers" type="Node3D" parent="." unique_id=1404778858]
+
+[node name="placeMarker1" type="Marker3D" parent="placeMarkers" unique_id=984888391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32510126, 1, 0.35036084)
+
+[node name="placeMarker2" type="Marker3D" parent="placeMarkers" unique_id=218095721]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28371724, 0.99999994, 0.07140598)
+
+[node name="placeMarker3" type="Marker3D" parent="placeMarkers" unique_id=1315131202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037971996, 1, 0.3455196)
+
+[node name="placeMarker4" type="Marker3D" parent="placeMarkers" unique_id=1160564791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.040012047, 0.99999994, 0.06557007)
+
+[node name="placeMarker5" type="Marker3D" parent="placeMarkers" unique_id=283911901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22697487, 1, 0.34110242)
+
+[node name="placeMarker6" type="Marker3D" parent="placeMarkers" unique_id=1929642791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30378538, 0.99999994, 0.08045782)
+
+[node name="placeMarker7" type="Marker3D" parent="placeMarkers" unique_id=612784219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33671516, 1, -0.22528115)
+
+[node name="placeMarker8" type="Marker3D" parent="placeMarkers" unique_id=1010873976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055761933, 0.99999994, -0.25737038)
+
+[node name="placeMarker9" type="Marker3D" parent="placeMarkers" unique_id=813808820]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31332627, 1, -0.27736944)

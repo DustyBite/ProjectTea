@@ -1,0 +1,424 @@
+[gd_scene format=3 uid="uid://dasyxlqkfx547"]
+
+[ext_resource type="PackedScene" uid="uid://dkkmjvu1xkov1" path="res://DevStuff/playerCam.tscn" id="1_ewd8h"]
+[ext_resource type="Script" uid="uid://ck6m8bj5lo73k" path="res://DevStuff/worldScript.gd" id="1_kw71i"]
+[ext_resource type="Material" uid="uid://cfpq3lfwrqshy" path="res://DevStuff/floorMatTemp.tres" id="1_n3mj1"]
+[ext_resource type="Material" uid="uid://ddggha0h4qu8c" path="res://DevStuff/matTemp2.tres" id="4_ewd8h"]
+[ext_resource type="Material" uid="uid://cvstlcoiqu3hh" path="res://DevStuff/matTemp1.tres" id="6_ewd8h"]
+[ext_resource type="PackedScene" uid="uid://l8uwifphkwmc" path="res://DevStuff/LPGTest.glb" id="7_5f43b"]
+[ext_resource type="VoxelGIData" uid="uid://cyiqsdkgo2i0" path="res://DevStuff/PixelShaderTestScene.VoxelGI_data.res" id="7_kw71i"]
+
+[sub_resource type="Environment" id="Environment_n3mj1"]
+background_mode = 1
+tonemap_exposure = 0.5
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+sdfgi_cascades = 2
+sdfgi_y_scale = 0
+sdfgi_energy = 0.25
+volumetric_fog_enabled = true
+adjustment_enabled = true
+adjustment_contrast = 1.25
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_57xvu"]
+material = ExtResource("1_n3mj1")
+size = Vector2(32, 12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qfnt5"]
+size = Vector3(32, 1, 6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n3mj1"]
+size = Vector3(0.5, 3, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ewd8h"]
+size = Vector3(0.5, 3, 6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ewd8h"]
+size = Vector3(30, 1, 20)
+
+[node name="world" type="Node3D" unique_id=1062845823]
+script = ExtResource("1_kw71i")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=681628501]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 6
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=463670780]
+handle_input_locally = false
+size = Vector2i(320, 180)
+render_target_update_mode = 4
+
+[node name="cameraThing" parent="SubViewportContainer/SubViewport" unique_id=1783303903 instance=ExtResource("1_ewd8h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport" unique_id=526471]
+environment = SubResource("Environment_n3mj1")
+
+[node name="lights" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1068129696]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=1732536846]
+transform = Transform3D(1, 0, 0, 0, 0.42261824, 0.9063078, 0, -0.9063078, 0.42261824, 6, 2.75, 1.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=2109130784]
+transform = Transform3D(1, 0, 0, 0, -0.42261833, 0.90630776, 0, -0.90630776, -0.42261833, 6, 2.75, 2.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=592353573]
+transform = Transform3D(1, 0, 0, 0, 0.42261824, 0.9063078, 0, -0.9063078, 0.42261824, 6, 2.75, -2.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=1063574968]
+transform = Transform3D(1, 0, 0, 0, -0.42261833, 0.90630776, 0, -0.90630776, -0.42261833, 6, 2.75, -1.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=1397743922]
+transform = Transform3D(1, 0, 0, 0, 0.42261824, 0.9063078, 0, -0.9063078, 0.42261824, 12, 2.75, 1.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=192234909]
+transform = Transform3D(1, 0, 0, 0, -0.42261833, 0.90630776, 0, -0.90630776, -0.42261833, 12, 2.75, 2.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=1656435757]
+transform = Transform3D(1, 0, 0, 0, 0.42261824, 0.9063078, 0, -0.9063078, 0.42261824, 12, 2.75, -2.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=1539529511]
+transform = Transform3D(1, 0, 0, 0, -0.42261833, 0.90630776, 0, -0.90630776, -0.42261833, 12, 2.75, -1.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=1172546740]
+transform = Transform3D(1, 0, 0, 0, 0.42261824, 0.9063078, 0, -0.9063078, 0.42261824, -6, 2.75, 1.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=616658197]
+transform = Transform3D(1, 0, 0, 0, -0.42261833, 0.90630776, 0, -0.90630776, -0.42261833, -6, 2.75, 2.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=1532657238]
+transform = Transform3D(1, 0, 0, 0, 0.42261824, 0.9063078, 0, -0.9063078, 0.42261824, -6, 2.75, -2.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=825500730]
+transform = Transform3D(1, 0, 0, 0, -0.42261833, 0.90630776, 0, -0.90630776, -0.42261833, -6, 2.75, -1.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=240412004]
+transform = Transform3D(1, 0, 0, 0, 0.42261824, 0.9063078, 0, -0.9063078, 0.42261824, -12, 2.75, 1.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=693379952]
+transform = Transform3D(1, 0, 0, 0, -0.42261833, 0.90630776, 0, -0.90630776, -0.42261833, -12, 2.75, 2.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D19" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=292642714]
+transform = Transform3D(1, 0, 0, 0, 0.42261824, 0.9063078, 0, -0.9063078, 0.42261824, -12, 2.75, -2.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D20" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=1633762192]
+transform = Transform3D(1, 0, 0, 0, -0.42261833, 0.90630776, 0, -0.90630776, -0.42261833, -12, 2.75, -1.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=726045549]
+transform = Transform3D(1, 0, 0, 0, 0.42261824, 0.9063078, 0, -0.9063078, 0.42261824, 0, 2.75, 1.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=950119433]
+transform = Transform3D(1, 0, 0, 0, -0.42261833, 0.90630776, 0, -0.90630776, -0.42261833, 0, 2.75, 2.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=1766024973]
+transform = Transform3D(1, 0, 0, 0, 0.42261824, 0.9063078, 0, -0.9063078, 0.42261824, 0, 2.75, -2.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="SubViewportContainer/SubViewport/lights" unique_id=1157827580]
+transform = Transform3D(1, 0, 0, 0, -0.42261833, 0.90630776, 0, -0.90630776, -0.42261833, 0, 2.75, -1.5)
+light_color = Color(0.97, 0.7682401, 0.5917, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 50.0
+
+[node name="objects" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=265184633]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1158648842]
+mesh = SubResource("PlaneMesh_57xvu")
+
+[node name="floor" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=36136282]
+material_override = ExtResource("6_ewd8h")
+mesh = SubResource("BoxMesh_qfnt5")
+
+[node name="pillar" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1788318019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -2)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar2" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1715788489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 2)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar3" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1851574924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, -2)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar4" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1413917815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, 2)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar11" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=2046677315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.5, -2)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar21" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=186782730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.25, 1, 0)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_ewd8h")
+
+[node name="pillar12" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1202651573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.5, 2)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar5" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=768369024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.5, -2)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar6" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=209720128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.5, 2)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar7" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=690775223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, -2)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="floor2" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=2008202892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+material_override = ExtResource("6_ewd8h")
+mesh = SubResource("BoxMesh_qfnt5")
+
+[node name="pillar9" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=748084964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 7)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar10" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1976488829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, 7)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar13" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=540012040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.5, 7)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar14" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=340088584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.5, 7)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar15" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1530470178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, 7)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar8" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1577603597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, 2)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="floor3" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=13919463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
+material_override = ExtResource("6_ewd8h")
+mesh = SubResource("BoxMesh_qfnt5")
+
+[node name="pillar16" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1709156767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -7)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar17" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1835480941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, -7)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar18" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1662545069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.5, -7)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar19" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1065100223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.5, -7)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="pillar20" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/objects" unique_id=1973315745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, -7)
+material_override = ExtResource("4_ewd8h")
+mesh = SubResource("BoxMesh_n3mj1")
+
+[node name="VoxelGI" type="VoxelGI" parent="SubViewportContainer/SubViewport" unique_id=1733249037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6668749, 0)
+size = Vector3(40, 10, 30)
+data = ExtResource("7_kw71i")
+
+[node name="LPGTest" parent="SubViewportContainer/SubViewport" unique_id=1625180551 instance=ExtResource("7_5f43b")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.37933195, 0.5, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewportContainer/SubViewport" unique_id=572577543]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/StaticBody3D" unique_id=1978397444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_ewd8h")
