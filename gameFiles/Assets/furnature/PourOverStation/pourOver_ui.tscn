@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cb88q7tbjrg2l"]
+
+[ext_resource type="Script" uid="uid://claeg1jl8plks" path="res://Assets/furnature/PourOverStation/pourOverUiScript.gd" id="1_melgj"]
+
+[node name="pourOverUI" type="Panel" unique_id=1275759806]
+offset_left = 477.0
+offset_top = 122.0
+offset_right = 1107.0
+offset_bottom = 682.0
+script = ExtResource("1_melgj")
+
+[node name="medium" type="Button" parent="." unique_id=1811483449]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 110.0
+text = "MEDIUM ROAST"
+
+[node name="herbal" type="Button" parent="." unique_id=1022108760]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 10.0
+offset_right = 620.0
+offset_bottom = 110.0
+text = "HERBAL TEA"
+
+[node name="dark" type="Button" parent="." unique_id=1649854738]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 120.0
+offset_right = 310.0
+offset_bottom = 220.00005
+text = "DARK ROAST"
+
+[node name="light" type="Button" parent="." unique_id=1408728639]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 120.0
+offset_right = 620.0
+offset_bottom = 220.00005
+text = "LIGHT ROAST"
+
+[node name="decaf" type="Button" parent="." unique_id=1519672067]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 230.0
+offset_right = 310.0
+offset_bottom = 330.00006
+text = "DECAF"
+
+[node name="single" type="Button" parent="." unique_id=2095577654]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 230.0
+offset_right = 620.0
+offset_bottom = 330.00006
+text = "SINGLE ORIGIN"
+
+[node name="hibiscus" type="Button" parent="." unique_id=589946229]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 340.0
+offset_right = 310.0
+offset_bottom = 440.0
+text = "HIBISCUS TEA"
+
+[node name="barley" type="Button" parent="." unique_id=455964870]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 340.0
+offset_right = 620.0
+offset_bottom = 440.0
+text = "BARLEY TEA"
+
+[node name="roastedCorn" type="Button" parent="." unique_id=32855400]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 450.0
+offset_right = 310.0
+offset_bottom = 549.9999
+text = "ROASTED CORN TEA"
+
+[node name="cascara" type="Button" parent="." unique_id=135020817]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 450.0
+offset_right = 620.0
+offset_bottom = 549.9999
+text = "CASCARA"
+
+[connection signal="pressed" from="medium" to="." method="_on_medium_pressed"]
+[connection signal="pressed" from="herbal" to="." method="_on_herbal_pressed"]
+[connection signal="pressed" from="dark" to="." method="_on_dark_pressed"]
+[connection signal="pressed" from="light" to="." method="_on_light_pressed"]
+[connection signal="pressed" from="decaf" to="." method="_on_decaf_pressed"]
+[connection signal="pressed" from="single" to="." method="_on_single_pressed"]
+[connection signal="pressed" from="hibiscus" to="." method="_on_hibiscus_pressed"]
+[connection signal="pressed" from="barley" to="." method="_on_barley_pressed"]
+[connection signal="pressed" from="roastedCorn" to="." method="_on_roasted_corn_pressed"]
+[connection signal="pressed" from="cascara" to="." method="_on_cascara_pressed"]

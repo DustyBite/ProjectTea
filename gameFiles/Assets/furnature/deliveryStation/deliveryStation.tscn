@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://fyrnqwd6mffm"]
+
+[ext_resource type="Script" uid="uid://c3kmgobpfmdb4" path="res://Assets/furnature/deliveryStation/deliveryStationScript.gd" id="1_h50hg"]
+[ext_resource type="Material" uid="uid://cl8wbil41mpdw" path="res://Assets/furnature/furnatureMatTemp3.tres" id="2_vo4j7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ef2j"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hxr08"]
+
+[node name="deliveryStation" type="StaticBody3D" unique_id=401163820 node_paths=PackedStringArray("mesh")]
+script = ExtResource("1_h50hg")
+mesh = NodePath("MeshInstance3D")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1902730993]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_2ef2j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1357691470]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = ExtResource("2_vo4j7")
+mesh = SubResource("BoxMesh_hxr08")
+
+[node name="placeMarker" type="Marker3D" parent="." unique_id=906634233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

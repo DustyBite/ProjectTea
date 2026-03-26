@@ -13,4 +13,4 @@ func interaction(player):
 		if dish.base != "water":
 			dish.isDirty = true
 		dish.temperature = "warm"
-		dish.fill("Empty")
+		dish.empty()

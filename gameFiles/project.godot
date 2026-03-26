@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Globals="uid://d2h08b7a4gbkk"
 WorldScript="uid://ck6m8bj5lo73k"
+TeaResources="*uid://cipumm2wlmuh7"
 
 [display]
 

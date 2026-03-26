@@ -1,14 +1,16 @@
-[gd_scene format=3 uid="uid://cq8qo4l3yrkgv"]
+[gd_scene format=3 uid="uid://du3vke5bm5fcx"]
 
-[ext_resource type="Script" uid="uid://cyj07380m1s7" path="res://Assets/furnature/MixingStation/table.gd" id="1_rrauj"]
-[ext_resource type="Material" uid="uid://djkl2n0qoxtyc" path="res://Assets/furnature/furnatureMatTemp1.tres" id="2_7fr7y"]
+[ext_resource type="Script" uid="uid://dd2taqs8dq1oc" path="res://Assets/furnature/PourOverStation/pourOverStationScript.gd" id="1_wd16p"]
+[ext_resource type="Material" uid="uid://djkl2n0qoxtyc" path="res://Assets/furnature/furnatureMatTemp1.tres" id="2_6asg3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_10gxc"]
+size = Vector3(2, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qcacd"]
+size = Vector3(2, 1, 1)
 
-[node name="table" type="StaticBody3D" unique_id=474436658 node_paths=PackedStringArray("mesh")]
-script = ExtResource("1_rrauj")
+[node name="pourOverStation" type="StaticBody3D" unique_id=474436658 node_paths=PackedStringArray("mesh")]
+script = ExtResource("1_wd16p")
 mesh = NodePath("MeshInstance3D")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=946263752]
@@ -17,7 +19,7 @@ shape = SubResource("BoxShape3D_10gxc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=97965611]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-material_override = ExtResource("2_7fr7y")
+material_override = ExtResource("2_6asg3")
 mesh = SubResource("BoxMesh_qcacd")
 
 [node name="placeMarker" type="Marker3D" parent="." unique_id=984888391]

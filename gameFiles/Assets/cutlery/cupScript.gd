@@ -1,7 +1,7 @@
 extends DishBase
 
 var base: String = "Empty"
-var mixins: Array[String] = ["Empty","Empty","Empty"]
+var mixins: Array[String] = ["Empty","Empty","Empty","Empty"]
 var temperature: String = "warm"
 var isDirty = false
 var type = "isCup"
@@ -30,7 +30,15 @@ func fill(value):
 		"water":
 			water.visible = true
 			liquid =  Color(1,1,1)
-	
+
+func empty():
+	base = "Empty"
+	temperature = "warm"
+	water.visible = false
+	var i = 4
+	while i > 0:
+		i -= 1
+		mixins[i] = "Empty"
 
 func updateLiquidColor():
 	var material = water.get_active_material(0)

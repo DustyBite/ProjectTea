@@ -216,9 +216,7 @@ func placeDish() -> void:
 	else:
 		if furniture.dish != null:
 			return
-		furniture.dish = dishHolding
-		dishHolding.reparent(furniture)
-		dishHolding.global_position = furniture.placeSpot.global_position
+		furniture.placeDish(dishHolding)
 		dishHolding = null
 
 # -----------------

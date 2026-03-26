@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://hgfia455oo6c"]
+
+[ext_resource type="Script" uid="uid://dlpmqxc0aeot" path="res://Assets/ticket/orderTicketScript.gd" id="1_a2583"]
+
+[node name="orderTicket" type="Panel" unique_id=1392395863]
+offset_left = 1298.0
+offset_top = 2.0
+offset_right = 1598.0
+offset_bottom = 302.0
+script = ExtResource("1_a2583")
+
+[node name="base" type="Label" parent="." unique_id=1570947032]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 60.0
+text = "BASE:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="extra1" type="Label" parent="." unique_id=1277591893]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 300.0
+offset_bottom = 119.99999
+text = "EXTRA ONE:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="extra2" type="Label" parent="." unique_id=484979098]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 300.0
+offset_bottom = 180.0
+text = "EXTRA TWO:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="extra3" type="Label" parent="." unique_id=1040809114]
+layout_mode = 0
+offset_top = 180.0
+offset_right = 300.0
+offset_bottom = 240.0
+text = "EXTRA THREE:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="extra4" type="Label" parent="." unique_id=802380652]
+layout_mode = 0
+offset_top = 240.0
+offset_right = 300.0
+offset_bottom = 300.0
+text = "EXTRA FOUR:"
+horizontal_alignment = 1
+vertical_alignment = 1

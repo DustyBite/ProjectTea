@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://x812xjxsckst"]
+
+[ext_resource type="Script" uid="uid://cun2pj58ck5hq" path="res://Assets/furnature/MixingStation/mixingUiScript.gd" id="1_gesos"]
+
+[node name="mixingUI" type="Panel" unique_id=1275759806]
+offset_left = 296.0
+offset_top = 45.0
+offset_right = 1236.0
+offset_bottom = 825.0
+script = ExtResource("1_gesos")
+
+[node name="chocolate" type="Button" parent="." unique_id=1811483449]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 110.0
+text = "HOT CHOCOLATE"
+
+[node name="matcha" type="Button" parent="." unique_id=1649854738]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 120.0
+offset_right = 310.0
+offset_bottom = 220.00005
+text = "MATCHA
+"
+
+[node name="chai" type="Button" parent="." unique_id=1519672067]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 230.0
+offset_right = 310.0
+offset_bottom = 330.00006
+text = "CHAI SPICE"
+
+[node name="milkPowder" type="Button" parent="." unique_id=589946229]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 340.0
+offset_right = 310.0
+offset_bottom = 440.0
+text = "MILK POWDER"
+
+[node name="taro" type="Button" parent="." unique_id=32855400]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 450.0
+offset_right = 310.0
+offset_bottom = 549.9999
+text = "TARO"
+
+[node name="hojicha" type="Button" parent="." unique_id=1506588115]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 560.0
+offset_right = 310.0
+offset_bottom = 659.9999
+text = "HOJICHA POWDER"
+
+[node name="honey" type="Button" parent="." unique_id=1599995337]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 10.0
+offset_right = 620.0
+offset_bottom = 110.0
+text = "HONEY"
+
+[node name="caneSugar" type="Button" parent="." unique_id=121374663]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 120.0
+offset_right = 620.0
+offset_bottom = 220.00005
+text = "CANE SUGAR"
+
+[node name="brownSugar" type="Button" parent="." unique_id=1205508024]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 230.0
+offset_right = 620.0
+offset_bottom = 330.00006
+text = "BROWN SUGAR"
+
+[node name="vanillaSyrup" type="Button" parent="." unique_id=1462231531]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 340.0
+offset_right = 620.0
+offset_bottom = 440.0
+text = "VANILLA SYRUP"
+
+[node name="lemon" type="Button" parent="." unique_id=476258799]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 10.0
+offset_right = 930.0
+offset_bottom = 110.0
+text = "LEMON"
+
+[node name="cinamon" type="Button" parent="." unique_id=956615077]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 120.0
+offset_right = 930.0
+offset_bottom = 220.00005
+text = "CINAMON"
+
+[node name="ginger" type="Button" parent="." unique_id=312607442]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 230.0
+offset_right = 930.0
+offset_bottom = 330.00006
+text = "GINGER"
+
+[node name="peach" type="Button" parent="." unique_id=1731539459]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 340.0
+offset_right = 930.0
+offset_bottom = 440.0
+text = "PEACH"
+
+[node name="lychee" type="Button" parent="." unique_id=1017608994]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 450.0
+offset_right = 930.0
+offset_bottom = 549.9999
+text = "LYCHEE"
+
+[node name="rose" type="Button" parent="." unique_id=1225174225]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 560.0
+offset_right = 930.0
+offset_bottom = 659.9999
+text = "ROSE"
+
+[node name="lavender" type="Button" parent="." unique_id=612099274]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 670.0
+offset_right = 930.0
+offset_bottom = 769.9999
+text = "LAVENDER"
+
+[connection signal="pressed" from="chocolate" to="." method="_on_chocolate_pressed"]
+[connection signal="pressed" from="matcha" to="." method="_on_matcha_pressed"]
+[connection signal="pressed" from="chai" to="." method="_on_chai_pressed"]
+[connection signal="pressed" from="milkPowder" to="." method="_on_milk_powder_pressed"]
+[connection signal="pressed" from="taro" to="." method="_on_taro_pressed"]
+[connection signal="pressed" from="hojicha" to="." method="_on_hojicha_pressed"]
+[connection signal="pressed" from="honey" to="." method="_on_honey_pressed"]
+[connection signal="pressed" from="caneSugar" to="." method="_on_cane_sugar_pressed"]
+[connection signal="pressed" from="brownSugar" to="." method="_on_brown_sugar_pressed"]
+[connection signal="pressed" from="vanillaSyrup" to="." method="_on_vanilla_syrup_pressed"]
+[connection signal="pressed" from="lemon" to="." method="_on_lemon_pressed"]
+[connection signal="pressed" from="cinamon" to="." method="_on_cinamon_pressed"]
+[connection signal="pressed" from="ginger" to="." method="_on_ginger_pressed"]
+[connection signal="pressed" from="peach" to="." method="_on_peach_pressed"]
+[connection signal="pressed" from="lychee" to="." method="_on_lychee_pressed"]
+[connection signal="pressed" from="rose" to="." method="_on_rose_pressed"]
+[connection signal="pressed" from="lavender" to="." method="_on_lavender_pressed"]
