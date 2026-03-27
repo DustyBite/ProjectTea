@@ -207,6 +207,8 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 
 [node name="steepingStation" parent="mainCamContainer/SubViewport/furnatures" unique_id=856698464 node_paths=PackedStringArray("ui") instance=ExtResource("10_wboma")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -1)
 ui = NodePath("../../../../uiContainer/SubViewport/MainUI/steepingUI")
+stationActive = true
+currentLevel = "lvl4"
 
 [node name="pourOverStation" parent="mainCamContainer/SubViewport/furnatures" unique_id=1232530161 node_paths=PackedStringArray("ui") instance=ExtResource("11_btbf8")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, 0.5)

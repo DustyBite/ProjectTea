@@ -1,16 +1,6 @@
 extends Node
 
 var bases: Array[String] = [
-	"green",
-	"black",
-	"oolong",
-	"white",
-	"yellow",
-	"dark",
-	"jasmine",
-	"earlGrey",
-	"ginseng",
-	"chrysanthemum",
 	"medium",
 	"herbal",
 	"dark",
